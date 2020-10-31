@@ -2,7 +2,7 @@
 **S**mall **S**ample **K**ernel Machine **A**ssociation **T**est v1.0
 
 ## Overview
-The classic SKAT (SNP-set/sequence kernel association test) could lose power if (1) the sample size is small, or (2) the coefficient of variation of the kernel spectrum is small. The power loss is due to ignoring the uncertainty in the error variance estimate.  We propose several versions of adjusted SKAT for different types of outcomes to improve the power of SKAT for its unfavorable situations.  The adjusted SKAT circumvents the difficulty of estimating the error variance (scale) under small sample sizes by deriving a scale-free statistic similar to F-statistic.  We implement the small-sample adjusted SKAT for
+The classic SKAT (SNP-set/sequence kernel association test) could lose power if (1) the sample size is small, or (2) the coefficient of variation of the kernel spectrum is small. The power loss is due to ignoring the uncertainty in the error variance estimate.  We propose several versions of adjusted SKAT for different types of outcomes to improve the power of SKAT in its unfavorable situations.  The adjusted SKAT circumvents the difficulty of estimating the error variance (scale) under small sample sizes by deriving a scale-free statistic similar to F-statistic.  We implement the small-sample adjusted SKAT for
 
 * Univariate continuous and binary outcome (aSKAT)
 * Multivariate continuous outcome (mSKAT)
