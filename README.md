@@ -22,7 +22,7 @@ The classic SKAT (SNP-set/sequence kernel association test) could lose power if 
 ## Installation         
 
 ```
-install.packages(c("Matrix", "lme4qtl", "CompQuadForm", "lme4"))
+install.packages(c("Matrix","CompQuadForm", "lme4"))
 install.packages("devtools")
 devtools::install_github("variani/lme4qtl")
 devtools::install_github("jchen1981/SSKAT")
