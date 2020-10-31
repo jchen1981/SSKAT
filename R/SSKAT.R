@@ -563,3 +563,4 @@ VSAT <- function (formula.H0, data = NULL, K, relmat = NULL, family, acc = 0.000
 	
 }
 
+
