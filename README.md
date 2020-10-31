@@ -34,7 +34,7 @@ devtools::install_github("jchen1981/SSKAT")
 
 ### Univariate continuous and binary outcome
 ```
-library("SSKAT")
+library(SSKAT)
 set.seed(123)
 Y <- rnorm(100)
 Z <- matrix(rnorm(200), 100, 2)
@@ -52,8 +52,6 @@ aSKAT(Y ~ 1, data = data, K = K, type = 'binary')    # No covariate
 
 ### Multivariate continuous outcome with de-correlation
 ```
-library("SSKAT")
-set.seed(123)
 Y <- matrix(rnorm(400), 100, 4)
 Z <- matrix(rnorm(200), 100, 2)
 G <- matrix(rbinom(1000, 1, 0.25), 100, 10)
@@ -66,8 +64,6 @@ mSKAT(~ 1, Y = Y, K = K)    # No covariate
 
 ### Multivariate continuous outcome without de-correlation
 ```
-library("SSKAT")
-set.seed(123)
 L <- matrix(rnorm(1000), 100, 10)  # Latent factor to induce correlation in Y
 Y <- scale(L %*% matrix(rnorm(10 * 40), 10, 40)) + matrix(rnorm(100 * 40), 100, 40)
 G <- scale(Y %*% matrix(rnorm(40 * 10), 40, 10)) * 0.2 + matrix(rnorm(100 * 10), 100, 10)
@@ -78,8 +74,6 @@ mSKAT2(Y = Y, K = K)  # No de-correlation
 
 ### Univariate correlated continuous outcome
 ```
-library("SSKAT")
-set.seed(123)
 Y <- rnorm(100)
 Z <- matrix(rnorm(200), 100, 2)
 ID <- gl(20, 5)
@@ -92,8 +86,6 @@ cSKAT(Y ~ (1 | ID), data = data, K = K)  # No covariate
 
 ### Univariate correlated general outcome (Generalized Mixed Effects Model, GLMM)
 ```
-library("SSKAT")
-set.seed(123)
 m <- 20; k <- 4; n <- m * k; s <- 20
 x <- rnorm(n); z <- matrix(sample(0 : 1, n * s, repl = TRUE, prob = c(0.8, 0.2)), n, s)
 a <- rnorm(s); b <- 1
